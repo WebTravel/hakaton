@@ -1,0 +1,54 @@
+
+body
+	position: relative
+	overflow: hidden
+
+.animal
+	width: 200px
+	height: 200px
+	position: absolute
+	left: 0%
+	bottom: 30px
+	transform: translateX(-100%)
+	transition: transform 150ms linear
+	border-radius: 30%
+	cursor: pointer
+	will-change: transform
+
+.animal:after
+	display: block
+	content: ''
+	position: absolute
+	left: 0
+	top: 0
+	width: 100%
+	height: 100%
+	background-size: 200px
+	background-repeat: no-repeat
+	background-position: 0 0
+	z-index: 3
+	transform: scaleX(-1)
+	filter: FlipV
+	will-change: transform
+
+
+.background-eat:after
+	background-size: 280px
+	width: 280px
+	height: 280px
+	will-change: transform
+
+.reverse:after
+	transform: scaleX(1)
+	will-change: transform
+
+canvas
+	overflow: hidden
+
+.stop
+	transform: translateX(3000%)
+	transition: transform 600ms linear
+	will-change: transform
+
+@import base/base64
+	
